@@ -15,13 +15,17 @@
 <body>
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <p id="interno">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div id="msg">Clique em mim</div>
     <script>
         const itens = window.document.querySelectorAll('p')
         itens.forEach(item => {
             item.style.backgroundColor = 'yellow'
             item.style.borderRadius = '5px'
+        })
+        const interno = window.document.querySelectorAll('#interno strong')
+        interno.forEach(item => {
+            item.style.color = 'red'
         })
     </script>
 </body>
