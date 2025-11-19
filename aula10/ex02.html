@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(87, 103, 155);
+            color: white;
+            background-color: rgb(58, 69, 105);
             text-align: center;
         }
     </style>
@@ -20,9 +21,10 @@
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="Somar" onclick="somar()">
     <div id="res">
-        Resultado
+        
     </div>
     <script>
+        /*
         function somar() {
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
@@ -31,6 +33,13 @@
             var n2 = Number(tn2.value)
             var s = n1 + n2
             res.innerText = `O resultado da soma é ${s}.`
+        }
+        */
+        function somar() {
+            var n1 = Number(window.document.getElementById('txtn1').value)
+            var n2 = Number(window.document.getElementById('txtn2').value)
+            var s = n1 + n2
+            window.document.getElementById('res').innerText = `O resultado da soma é ${s}.`
         }
     </script>
 </body>
