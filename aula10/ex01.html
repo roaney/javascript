@@ -21,16 +21,22 @@
 </head>
 <body>
     <div>
-        <h1 id="area" onclick="clicar()">
+        <h1 id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
             Interaja...
         </h1>
     </div>
     <script>
+        var a = window.document.getElementById('area')
         function clicar() {
-            var a = window.document.getElementById('area')
             a.innerText = 'Clicou!'
             a.style.backgroundColor = 'white'
             a.style.borderRadius = '20px'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
         }
     </script>
 </body>
