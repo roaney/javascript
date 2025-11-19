@@ -21,12 +21,15 @@
 </head>
 <body>
     <div>
-        <h1 id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <h1 id="area">
             Interaja...
         </h1>
     </div>
     <script>
         var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.backgroundColor = 'white'
@@ -37,6 +40,8 @@
         }
         function sair() {
             a.innerText = 'Saiu!'
+            a.style.backgroundColor = 'rgb(145, 145, 145)'
+            a.style.borderRadius = '0px'
         }
     </script>
 </body>
