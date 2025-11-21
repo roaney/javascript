@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgb(71, 146, 71);
+            color: white;
+        }
+        h1 {
+            padding-top: 20px;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        main {
+            width: 600px;
+            height: 450px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+        #um {
+            text-align: left;
+        }
+        #um > div {
+            padding: 20px 0px 0px 20px;
+        }
+        #dois > img {
+            width: 250px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            padding-top: 30px;
+        }
+        body > p {
+            padding-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Verificador de Idade
+    </h1>
+    <main>
+        <section id="um">
+            <div>
+                <label for="ano">Ano de nascimento:</label>
+                <input type="number" name="ano" id="ano">
+            </div>
+            <div>
+                <label for="">Sexo:</label>
+                <input type="radio" name="sex" id="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sex" id="fem">
+                <label for="fem">Feminino</label>
+            </div>
+            <div>
+                <input type="submit" value="Verificar" onclick="verificar_idade()">
+            </div>
+        </section>
+        <section id="dois">
+            <p id="txtidade">
+
+            </p>
+            <img src="mulher_adulta.jpg" alt="Imagem da pessoa">
+        </section>
+    </main>
+    <p>
+        RealTime S.A.
+    </p>
+</body>
+</html>
