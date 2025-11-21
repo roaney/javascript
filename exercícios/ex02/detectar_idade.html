@@ -34,7 +34,7 @@
             aspect-ratio: 1/1;
             object-fit: cover;
             border-radius: 50%;
-            padding-top: 30px;
+            padding-top: 10px;
         }
         body > p {
             padding-top: 10px;
@@ -54,9 +54,9 @@
             </div>
             <div>
                 <label for="">Sexo:</label>
-                <input type="radio" name="sex" id="masc">
+                <input type="radio" name="sex" id="masc" value="homem">
                 <label for="masc">Masculino</label>
-                <input type="radio" name="sex" id="fem">
+                <input type="radio" name="sex" id="fem" value="mulher">
                 <label for="fem">Feminino</label>
             </div>
             <div>
@@ -65,7 +65,7 @@
         </section>
         <section id="dois">
             <p id="txtidade">
-
+                Preencha os dados acima e veja o resultado.
             </p>
             <img src="mulher_adulta.jpg" alt="Imagem da pessoa">
         </section>
@@ -73,5 +73,24 @@
     <p>
         RealTime S.A.
     </p>
+    <script>
+        
+        /*function obter_escolha() {
+                var selecionado = document.querySelector('input[name="sex"]:checked').value
+                return selecionado
+            }
+        */
+        function verificar_idade() {
+            // var escolha = obter_escolha()
+            /*if (idade < 12) {
+                document.getElementById('txtidade').innerText = `Detectamos ${escolha} com ${idade} anos.`
+            }
+            */
+            var ano_atual = new Date().getFullYear()
+            var nascimento = window.document.getElementById('ano').value
+            var idade = ano_atual - nascimento
+            document.getElementById('txtidade').innerText = idade
+        }
+    </script>
 </body>
 </html>
