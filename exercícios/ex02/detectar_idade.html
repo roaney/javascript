@@ -79,7 +79,7 @@
             var nascimento = window.document.getElementById('ano').value
             var idade = ano_atual - nascimento
             var selecionado = document.querySelector('input[name="sex"]:checked').value
-            if (idade < 1) {
+            if (idade < 1 || idade >= 130) {
                 window.alert('Verifique os dados e tente novamente!')
             } else if (selecionado == 'mulher') {
                 document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
