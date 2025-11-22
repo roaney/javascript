@@ -79,7 +79,9 @@
             var nascimento = window.document.getElementById('ano').value
             var idade = ano_atual - nascimento
             var selecionado = document.querySelector('input[name="sex"]:checked').value
-            if (selecionado == 'mulher') {
+            if (idade < 1) {
+                window.alert('Verifique os dados e tente novamente!')
+            } else if (selecionado == 'mulher') {
                 document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
                 if (idade < 12) {
                     document.querySelector('#dois img').src = 'menina.jpg'
