@@ -27,7 +27,7 @@ main {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
 body > p {
     padding-top: 10px;
