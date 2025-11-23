@@ -1,9 +1,9 @@
+var img = window.document.createElement('img')
 function verificar_idade() {
     var ano_atual = new Date().getFullYear()
     var nascimento = window.document.getElementById('ano').value
     var idade = ano_atual - nascimento
     var selecionado = document.querySelector('input[name="sex"]:checked').value
-    var img = window.document.createElement('img')
     window.document.getElementById('dois').appendChild(img)
     if (idade < 1 || idade >= 130) {
         window.alert('Verifique os dados e tente novamente!')
@@ -16,7 +16,7 @@ function verificar_idade() {
         } else if (idade < 60) {
             img.src = 'mulher_adulta.jpg'
         } else {
-            img.src = 'menina_idosa.jpg'
+            img.src = 'mulher_idosa.jpg'
         }
     } else if (selecionado == 'homem') {
         document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
