@@ -4,10 +4,10 @@ function verificar_idade() {
     var nascimento = window.document.getElementById('ano').value
     var idade = ano_atual - nascimento
     var selecionado = document.querySelector('input[name="sex"]:checked').value
-    window.document.getElementById('dois').appendChild(img)
     if (idade < 1 || idade >= 130) {
         window.alert('Verifique os dados e tente novamente!')
     } else if (selecionado == 'mulher') {
+        window.document.getElementById('dois').appendChild(img)
         document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
         if (idade < 12) {
             img.src = 'menina.jpg'
@@ -19,6 +19,7 @@ function verificar_idade() {
             img.src = 'mulher_idosa.jpg'
         }
     } else if (selecionado == 'homem') {
+        window.document.getElementById('dois').appendChild(img)
         document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
         if (idade < 12) {
             img.src = 'menino.jpg'
