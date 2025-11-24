@@ -21,13 +21,13 @@ function verificar_idade() {
     } else if (selecionado == 'homem') {
         document.getElementById('txtidade').innerText = `Detectamos ${selecionado} com ${idade} anos.`
         if (idade < 12) {
-            document.querySelector('#dois img').src = 'menino.jpg'
+            img.src = 'menino.jpg'
         } else if (idade < 18) {
-            document.querySelector('#dois img').src = 'menino_adolescente.jpg'
+            img.src = 'menino_adolescente.jpg'
         } else if (idade < 60) {
-            document.querySelector('#dois img').src = 'homem_adulto.jpg'
+            img.src = 'homem_adulto.jpg'
         } else {
-            document.querySelector('#dois img').src = 'homem_idoso.jpg'
+            img.src = 'homem_idoso.jpg'
         }
     }
 }
