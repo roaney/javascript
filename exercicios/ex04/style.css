@@ -1,0 +1,26 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    text-align: center;
+    background-color: rgb(127, 132, 136);
+}
+h1 {
+    margin: 30px 0px;
+    font-size: 3em;
+}
+main {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    background-color: rgb(134, 134, 255);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+body > p {
+    margin: 30px 0px;
+}
