@@ -5,6 +5,7 @@ function contar() {
     var passo = Number(document.getElementById('passo').value)
     document.getElementById('resultado').appendChild(p)
     if (inicio == false || fim == false) {
+        p.innerHTML = ""
         document.getElementById('txt').innerHTML = 'Impossível contar!'
     } else if (passo == 0) {
         window.alert('Passo inválido, considerando passo 1.')
