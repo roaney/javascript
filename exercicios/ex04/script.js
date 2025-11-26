@@ -1,6 +1,5 @@
 const botoes = document.querySelectorAll('.acao-btn')
 const CLASSE_SELECIONADA = 'selecionado'
-
 botoes.forEach(button => {
     button.addEventListener('click', function(e) {
         botoes.forEach(b => {
@@ -8,7 +7,6 @@ botoes.forEach(button => {
             // Se o botão não tiver a classe, .remove() não faz nada, o que é seguro.
             b.classList.remove(CLASSE_SELECIONADA);
         });
-
         // --- Passo de Seleção (Adicionar a borda ao botão clicado) ---
         // 'this' refere-se ao botão específico que foi clicado.
         this.classList.add(CLASSE_SELECIONADA);
