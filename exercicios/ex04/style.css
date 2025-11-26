@@ -7,19 +7,37 @@
 }
 body {
     text-align: center;
-    background-color: rgb(127, 132, 136);
+    background-image: url(numeros.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center bottom;
 }
 h1 {
     margin: 30px 0px;
-    font-size: 3em;
+    font-size: 5em;
+    text-align: left;
+    padding-left: 100px;
 }
 main {
-    width: 600px;
-    height: 400px;
+    width: 1000px;
     margin: auto;
-    background-color: rgb(134, 134, 255);
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#um {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+input {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    border: solid 2px black;
 }
 body > p {
     margin: 30px 0px;
