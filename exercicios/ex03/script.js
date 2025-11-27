@@ -12,6 +12,20 @@ function contar() {
         passo = 1
         document.getElementById('txt').innerHTML = 'Contando:'
         p.innerHTML = ""
+        if (inicio <= fim) {
+            for (inicio; inicio <= fim; inicio += passo) {
+                p.innerHTML += `${inicio} &#128073 `   
+            }
+            p.innerHTML += '&#128308'
+        } else {
+            for (inicio; inicio >= fim; inicio -= passo) {
+                p.innerHTML += `${inicio} &#128073 `   
+            }
+            p.innerHTML += '&#128308'
+        }
+    } else if (inicio <= fim) {
+        document.getElementById('txt').innerHTML = 'Contando:'
+        p.innerHTML = ""
         for (inicio; inicio <= fim; inicio += passo) {
             p.innerHTML += `${inicio} &#128073 `   
         }
@@ -19,7 +33,7 @@ function contar() {
     } else {
         document.getElementById('txt').innerHTML = 'Contando:'
         p.innerHTML = ""
-        for (inicio; inicio <= fim; inicio += passo) {
+        for (inicio; inicio >= fim; inicio -= passo) {
             p.innerHTML += `${inicio} &#128073 `   
         }
         p.innerHTML += '&#128308'
