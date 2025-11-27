@@ -4,10 +4,10 @@ botoes.forEach(button => {
     button.addEventListener('click', function(e) {
         // --- Passo de Desseleção (Remover a borda de TODOS) ---
         // Itera novamente sobre todos os botões...
-        botoes.forEach(b => {
+        botoes.forEach(button => {
             // ...e remove a classe 'selecionado' de cada um.
             // Se o botão não tiver a classe, .remove() não faz nada, o que é seguro.
-            b.classList.remove(CLASSE_SELECIONADA)
+            button.classList.remove(CLASSE_SELECIONADA)
         })
         // --- Passo de Seleção (Adicionar a borda ao botão clicado) ---
         // 'this' refere-se ao botão específico que foi clicado.
