@@ -16,13 +16,12 @@ function contar() {
             for (inicio; inicio <= fim; inicio += passo) {
                 p.innerHTML += `${inicio} &#128073 `   
             }
-            p.innerHTML += '&#128308'
         } else {
             for (inicio; inicio >= fim; inicio -= passo) {
                 p.innerHTML += `${inicio} &#128073 `   
             }
-            p.innerHTML += '&#128308'
         }
+        p.innerHTML += '&#128308'
     } else if (inicio <= fim) {
         document.getElementById('txt').innerHTML = 'Contando:'
         p.innerHTML = ""
