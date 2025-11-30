@@ -6,3 +6,4 @@ for (chave; chave < num.length; chave++) {
 for (chave in num) {
     console.log(`A posição ${chave} tem o valor ${num[chave]}.`)
 }
+console.log(num.indexOf(8))
