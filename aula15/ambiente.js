@@ -3,3 +3,6 @@ var chave = 0
 for (chave; chave < num.length; chave++) {
     console.log(`A posição ${chave} tem o valor ${num[chave]}.`)
 }
+for (chave in num) {
+    console.log(`A posição ${chave} tem o valor ${num[chave]}.`)
+}
