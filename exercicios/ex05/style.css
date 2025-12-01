@@ -24,8 +24,8 @@ main {
 #um {
     grid-column: 2 / 3;
 }
-#dois {
-    grid-column: 3 / -2;
+#um p {
+    margin-bottom: 10px;
 }
 #numero {
     border: 2px solid black;
@@ -33,11 +33,6 @@ main {
     cursor: pointer;
     color: white;
     background-color: black;
-}
-.fundodivs {
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 15px;
-    border-radius: 10px;
 }
 .botoes {
     width: 70px;
@@ -47,6 +42,18 @@ main {
     color: white;
     background-color: black;
 }
+#dois {
+    grid-column: 3 / -2;
+}
+#dois p {
+    font-weight: bold;
+}
+.fundodivs {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 10px;
+}
 body > p {
     text-align: center;
+    margin-top: 50px;
 }
