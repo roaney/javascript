@@ -5,3 +5,48 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+    background-image: url(numeros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+h1 {
+    padding: 50px;
+    font-size: 3em;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap: 15px;
+}
+#um {
+    grid-column: 2 / 3;
+}
+#dois {
+    grid-column: 3 / -2;
+}
+#numero {
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+.fundodivs {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 10px;
+}
+.botoes {
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+body > p {
+    text-align: center;
+}
