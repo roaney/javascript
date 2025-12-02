@@ -8,14 +8,19 @@ function add() {
     } else {
         valores.push(novo_valor)
         document.getElementById('txtvalores').innerHTML += `Valor ${novo_valor} adicionado.<br>`
+        document.getElementById('txtresultado').innerHTML = ""
     }
 }
 function finish() {
-    document.getElementById('txtresultado').innerHTML = "" 
-    let results = [quant(), maior(), menor(), soma(), media()]
-    results.forEach(elemento => {
-        document.getElementById('txtresultado').innerHTML += elemento
-    })
+    if (valores.length == 0) {
+        window.alert('Adicione valores antes de finalizar.')
+    } else {
+        document.getElementById('txtresultado').innerHTML = "" 
+        let results = [quant(), maior(), menor(), soma(), media()]
+        results.forEach(elemento => {
+            document.getElementById('txtresultado').innerHTML += elemento
+        })
+    }
 }
 function quant() {
     return `Ao todo, temos ${valores.length} números cadastrados.<br>`
