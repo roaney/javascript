@@ -1,6 +1,5 @@
 document.getElementById('adicionar').addEventListener('click', add)
 document.getElementById('finalizar').addEventListener('click', finish)
-let resultado = document.getElementById('txtresultado')
 let valores = []
 function add() {
     let novo_valor = document.getElementById('numero').value
@@ -12,5 +11,8 @@ function add() {
     }
 }
 function finish() {
-    
+    document.getElementById('txtresultado').innerHTML = quant(), maior(), menor(), soma(), media()
+}
+function quant() {
+    return `Ao todo, temos ${valores.length} números cadastrados.<br>`
 }
