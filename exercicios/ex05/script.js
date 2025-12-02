@@ -6,13 +6,36 @@ function add() {
     if (valores.indexOf(novo_valor) != -1 || novo_valor < 1 || novo_valor > 100 || novo_valor.length == 0) {
         window.alert('Valor inválido ou já inserido na lista.')
     } else {
-        valores.push(novo_valor)
+        valores.push(Number(novo_valor))
         document.getElementById('txtvalores').innerHTML += `Valor ${novo_valor} adicionado.<br>`
     }
 }
 function finish() {
-    document.getElementById('txtresultado').innerHTML = quant(), maior(), menor(), soma(), media()
+    document.getElementById('txtresultado').innerHTML = "" 
+    let results = [quant(), maior(), menor()]
+    results.forEach(elemento => {
+        document.getElementById('txtresultado').innerHTML += elemento
+    })
+    //quant(); maior(); menor(); soma(); media()
 }
 function quant() {
     return `Ao todo, temos ${valores.length} números cadastrados.<br>`
+}
+function maior() {
+    let maior_valor = valores[0]
+    valores.forEach(elemento => {
+        if (Number(elemento) > Number(maior_valor)) {
+            maior_valor = elemento
+        }
+    })
+    return `O maior valor informado foi ${maior_valor}.<br>`
+}
+function menor() {
+    let menor_valor = valores[0]
+    valores.forEach(elemento => {
+        if (Number(elemento) < Number(menor_valor)) {
+            menor_valor = elemento
+        }
+    })
+    return `O menor valor informado foi ${menor_valor}.<br>`
 }
