@@ -12,11 +12,10 @@ function add() {
 }
 function finish() {
     document.getElementById('txtresultado').innerHTML = "" 
-    let results = [quant(), maior(), menor(), soma()]
+    let results = [quant(), maior(), menor(), soma(), media()]
     results.forEach(elemento => {
         document.getElementById('txtresultado').innerHTML += elemento
     })
-    //soma(); media()
 }
 function quant() {
     return `Ao todo, temos ${valores.length} números cadastrados.<br>`
@@ -44,5 +43,13 @@ function soma() {
     valores.forEach(elemento => {
         soma_valores += elemento
     })
-    return `Somando todos os valores, temos ${soma_valores}.`
+    return `Somando todos os valores, temos ${soma_valores}.<br>`
+}
+function media() {
+    let soma_valores = 0
+    valores.forEach(elemento => {
+        soma_valores += elemento
+    })
+    let media_valores = soma_valores / valores.length
+    return `A média dos valores digitados é ${media_valores.toFixed(2).replace('.', ',')}.`
 }
