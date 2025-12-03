@@ -9,6 +9,7 @@ function add() {
         valores.push(novo_valor)
         document.getElementById('txtvalores').innerHTML += `Valor ${novo_valor} adicionado.<br>`
         document.getElementById('txtresultado').innerHTML = ""
+        document.getElementById('numero').value = ""
     }
 }
 function finish() {
