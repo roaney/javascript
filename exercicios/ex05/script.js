@@ -9,8 +9,9 @@ function add() {
         valores.push(novo_valor)
         document.getElementById('txtvalores').innerHTML += `Valor ${novo_valor} adicionado.<br>`
         document.getElementById('txtresultado').innerHTML = ""
-        document.getElementById('numero').value = ""
     }
+    document.getElementById('numero').value = ""
+    document.getElementById('numero').focus()
 }
 function finish() {
     if (valores.length == 0) {
