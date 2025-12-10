@@ -10,7 +10,7 @@ const relogio = {
         
         // Tentativa 2: Usando uma Arrow Function como callback
         console.log("Iniciando relógio...")
-        setTimeout(() => {
+        setInterval(() => {
             // ✅ A Arrow Function herda o 'this' da função 'iniciar' que a contém.
             this.segundos++
             console.log(`Segundos: ${this.segundos}`)
