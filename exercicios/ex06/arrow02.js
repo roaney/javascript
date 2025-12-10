@@ -17,3 +17,4 @@ const relogio = {
         }, 1000)
     }
 }
+relogio.iniciar()
