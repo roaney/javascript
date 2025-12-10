@@ -1,18 +1,19 @@
-function Temporizador() {
-    this.segundos = 0
-    // Função tradicional em setTimeout:
-    // 'this' aqui dentro apontaria para o objeto 'global'
-    // (ou undefined em modo estrito), NÃO para o objeto Temporizador.
-    // setTimeout(function() {
-    //     this.segundos++ // Erro/Comportamento inesperado
-    // }, 1000)
-    // Arrow Function em setTimeout:
-    // 'this' herda o 'this' da função Temporizador.
-    // 'this.segundos' refere-se corretamente à propriedade do objeto Temporizador.
-    setTimeout(() => {
-        this.segundos++
-        console.log(`Passou 1 segundo. Segundos: ${this.segundos}`)
-    }, 1000)
+const relogio = {
+    segundos: 0,
+    iniciar: function() {
+        // 🧠 'this' aqui é o objeto 'relogio'.
+        // Tentativa 1: Usando uma Função Tradicional como callback
+        // O que acontecerá com 'this' aqui dentro?
+        // setTimeout(function() {
+        //   this.segundos++ // Problema! 'this' será o escopo global.
+        // }, 1000)
+        
+        // Tentativa 2: Usando uma Arrow Function como callback
+        console.log("Iniciando relógio...")
+        setTimeout(() => {
+            // ✅ A Arrow Function herda o 'this' da função 'iniciar' que a contém.
+            this.segundos++
+            console.log(`Segundos: ${this.segundos}`)
+        }, 1000)
+    }
 }
-const tempo = new Temporizador()
-// (Se executarmos, 'tempo.segundos' será 1 após 1 segundo)
