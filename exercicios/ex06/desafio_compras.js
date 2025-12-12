@@ -8,9 +8,9 @@ const carrinho = [
 
 const alimentos = carrinho.filter(item => item.categoria == 'Alimento')
 console.log(alimentos)
-const taxa = alimentos.map(item => item.preco += 2)
-console.log(taxa)
-const total = taxa.reduce((total, item_atual) => total + item_atual, 0)
+const precosComTaxa = alimentos.map(item => item.preco += 2)
+console.log(precosComTaxa)
+const total = precosComTaxa.reduce((total, item_atual) => total + item_atual, 0)
 console.log(total)
 
 /*
