@@ -13,7 +13,7 @@ console.log(precosComTaxa)
 const total = precosComTaxa.reduce((total, item_atual) => total + item_atual, 0)
 console.log(total)
 
-/*
+/* --- ENCADEAMENTO ---
     const total = carrinho.filter(item => item.categoria == 'Alimento').map(item => item.preco + 2).reduce((total, item_atual) => total + item_atual, 0)
     console.log(total)
 */
