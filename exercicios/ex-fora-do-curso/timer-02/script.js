@@ -4,6 +4,9 @@ function somar() {
     soma += 5
     return soma
 }
-setInterval(() => {
+const intervalo = setInterval(() => {
     h1.textContent = somar()
-}, 5000)
+    if (soma == 50) {
+        clearInterval(intervalo)
+    }
+}, 2000)
