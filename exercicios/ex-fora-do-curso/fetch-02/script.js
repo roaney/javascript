@@ -9,5 +9,5 @@ async function buscarPreco() {
         alert(erro)
     }
 }
-setInterval(() => buscarPreco(), 10000)
-//buscarPreco()
+buscarPreco()
+setInterval(buscarPreco, 10000)
