@@ -4,8 +4,7 @@ async function buscar() {
         const dados = await resposta.json()
         const h1 = document.getElementById('cep')
         h1.textContent = dados.logradouro
-    }
-    catch(error) {
+    } catch(error) {
         alert(error)
     }
 }
